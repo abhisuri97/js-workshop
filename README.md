@@ -18,7 +18,7 @@ and then `cd` into the repository with `cd pennapps-2k17-sp-js.git`.
 
 Next, run `npm install` to install all the required modules. If you have any issues either doing `sudo npm install` will work or (for windows users) running as administrator should fix things.
 
-lastly run `node server.js` and you should be all set :).
+lastly run `node server.js` and you should be all set :) Look at `http://localhost:3000` for your app running locally.
 
 ## Launch to Heroku
 
