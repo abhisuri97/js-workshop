@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> SOCIET IO CHAT APP </title>
+    <link rel="stylesheet" href="static/index.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  </head>
+  <body>
+    <ul id="messages">
+    </ul>
+
+    <form action="">
+      <input id="m" autocomplete="off" />
+      <button>Send Message</button>
+    </form>
+    <script src="static/socket.io.js"></script>
+    <script>
+      var socket = io();
+      function askUsername(string) {
+          var potentialUsername = prompt(string);
+          socket.emit('askUser', potentialUsername);
+      }
+      $(document).ready( function() {
+        askUsername('Pick a Username');
+        socket.on('pickNew', function() {
+          askUsername('Sorry that username is taken. Pick another one!'); 
+        })
+        $('form').submit(function() {
+          socket.emit('chat message', $('#m').val());
+          $('#m').val('');
+          return false;
+        });
+        socket.on('chat message', function (msgObj) {
+          $('#messages').append($('<li>').text(msgObj.user + ': ' + msgObj.message));
+        });
+      });
+    </script>
+  </body>
+</html>
+
