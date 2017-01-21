@@ -1,8 +1,41 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font: 13px Helvetica, Arial; }
-form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-#messages { list-style-type: none; margin: 0; padding: 0; }
-#messages li { padding: 5px 10px; }
-#messages li:nth-child(odd) { background: #eee; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 13px Helvetica, Arial;
+}
+form {
+    background: #FFF;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+form input {
+    border: 0;
+    padding: 10px;
+    box-shadow: 1px 1px 10px #666;
+    width: 90%;
+    margin-right: .5%;
+}
+form button {
+    color: #FFF;
+    width: 9%;
+    background: #2ecc71;
+    box-shadow: 1px 1px 10px #666;
+    border: none;
+    padding: 10px;
+}
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#messages li {
+    padding: 5px 10px;
+}
+#messages li:nth-child(odd) {
+    background: #eee;
+}

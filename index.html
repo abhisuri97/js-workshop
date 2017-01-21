@@ -11,7 +11,7 @@
 
     <form action="">
       <input id="m" autocomplete="off" />
-      <button>Send Message</button>
+      <button>Send</button>
     </form>
     <script src="static/socket.io.js"></script>
     <script>
@@ -31,7 +31,7 @@
           return false;
         });
         socket.on('chat message', function (msgObj) {
-          $('#messages').append($('<li>').text(msgObj.user + ': ' + msgObj.message));
+          $('#messages').append($('<li>').text(msgObj.user + ': ' + msgObj.message).hide().fadeIn(200));
         });
       });
     </script>
