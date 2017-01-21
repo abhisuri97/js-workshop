@@ -1,0 +1,6 @@
+{
+  "name": "pennapps-2k17-sp-js",
+  "description": "Basic application of websockets",
+  "repository": "https://github.com/abhisuri97/pennapps-2k17-sp-js/",
+  "keywords": ["node", "express", "static", "sockets"]
+}
